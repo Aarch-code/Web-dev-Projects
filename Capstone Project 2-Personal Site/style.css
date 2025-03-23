@@ -1,0 +1,67 @@
+.btn {
+    background: #11cdd4;
+    background-image: -webkit-linear-gradient(top, #11cdd4, #11999e);
+    background-image: -moz-linear-gradient(top, #11cdd4, #11999e);
+    background-image: -ms-linear-gradient(top, #11cdd4, #11999e);
+    background-image: -o-linear-gradient(top, #11cdd4, #11999e);
+    background-image: linear-gradient(to bottom, #11cdd4, #11999e);
+    -webkit-border-radius: 8;
+    -moz-border-radius: 8;
+    border-radius: 8px;
+    font-family: "Montserrat", sans-serif;
+    color: #ffffff;
+    font-size: 20px;
+    padding: 10px 20px 10px 20px;
+    text-decoration: none;
+    width: 200px;
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.feature-icon {
+    width: 4rem;
+    height: 4rem;
+    border-radius: .75rem;
+}
+
+.pb-2{
+    font-family: 'Montserrat', sans-serif;
+    text-decoration: underline;
+    font-weight: bold;
+    text-align: center;
+}
+
+.display-4{
+    font-family: 'Montserrat', sans-serif;
+}
+
+.fs-2{
+    font-family: 'oswald', sans-serif;
+}
+
+.lead{
+    font-family: 'Inter', sans-serif;
+}
+
+.hero-section {
+    background: linear-gradient(135deg, #000428, #004e92); /* Deep blue gradient */
+    color: white; /* Text color */
+    padding: 100px 0;
+    text-align: center;
+    position: relative;
+}
+
+.hero-section::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 80%;
+    height: 100%;
+    background: radial-gradient(circle, rgba(0, 255, 170, 0.3) 10%, transparent 70%);
+    transform: translateX(-50%);
+    filter: blur(50px);
+    z-index: 0;
+}
+
