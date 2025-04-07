@@ -1,0 +1,38 @@
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    max-width: 800px;
+    margin: auto;
+    background: #f9f9f9;
+  }
+  
+  h1 {
+    color: #333;
+  }
+  
+  input, textarea {
+    width: 100%;
+    margin: 10px 0;
+    padding: 8px;
+  }
+  
+  button {
+    background-color: #007bff;
+    color: white;
+    padding: 8px 12px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .post {
+    background: white;
+    padding: 15px;
+    border-radius: 5px;
+  }
+  
+  @media (max-width: 600px) {
+    body {
+      padding: 10px;
+    }
+  }
+  
