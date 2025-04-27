@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title><%= drink.strDrink %></title>
+</head>
+<body>
+  <h1><%= drink.strDrink %></h1>
+  <img src="<%= drink.strDrinkThumb %>" width="300" />
+  <h3>Category: <%= drink.strCategory %></h3>
+  <h4>Instructions:</h4>
+  <p><%= drink.strInstructions %></p>
+
+  <h4>Ingredients:</h4>
+  <ul>
+    <% for (let i = 1; i <= 15; i++) {
+      const ingredient = drink['strIngredient' + i];
+      const measure = drink['strMeasure' + i];
+      if (ingredient) { %>
+      <li><%= measure || '' %> <%= ingredient %></li>
+    <% }} %>
+  </ul>
+
+  <a href="/">Get another 🍸</a>
+
+  <p><%- include("footer.ejs") %></p>
+</body>
+</html>
