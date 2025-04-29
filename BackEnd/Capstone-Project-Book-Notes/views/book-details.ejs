@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title><%= book ? 'Edit' : 'Add' %> Book</title>
+  <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+  <h1><%= book ? 'Edit' : 'Add' %> Book</h1>
+
+  <form method="post" action="<%= book ? `/books/${book.id}?_method=PUT` : '/books' %>">
+    <label>Title:
+      <input type="text" name="title" value="<%= book?.title || '' %>" required>
+    </label><br>
+
+    <label>Author:
+      <input type="text" name="author" value="<%= book?.author || '' %>">
+    </label><br>
+
+    <label>Rating:
+      <input type="number" name="rating" min="0" max="5" value="<%= book?.rating || 0 %>">
+    </label><br>
+
+    <label>Date Read:
+      <input type="date" name="date_read" value="<%= book?.date_read?.toISOString().split('T')[0] || '' %>">
+    </label><br>
+
+    <label>Notes:<br>
+      <textarea name="notes"><%= book?.notes || '' %></textarea>
+    </label><br>
+
+    <button type="submit"><%= book ? 'Update' : 'Add' %> Book</button>
+  </form>
+
+  <% if (book) { %>
+    <a href="/books">← Back to List</a>
+  <% } %>
+</body>
+</html>
